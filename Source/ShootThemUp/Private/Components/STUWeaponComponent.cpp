@@ -132,7 +132,7 @@ void USTUWeaponComponent::InitAnimation()
 		auto ReloadFinishedNotify = FindNotifyByClass<UMySTUReloadFinishedAnimNotify>(OneWeaponData.ReloadAnimMontage);
 		if (!ReloadFinishedNotify) continue;
 		
-		ReloadFinishedNotify->OnNotified.AddUObject(this, &USTUWeaponComponent::OnEquipFinished);
+		ReloadFinishedNotify->OnNotified.AddUObject(this, &USTUWeaponComponent::OnReloadFinished);
 	}
 }
 
